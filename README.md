@@ -1,48 +1,72 @@
-# 📧 Email Spam Detection using NLP & TF-IDF
+# Email Spam Detection using NLP and TF-IDF
 
-Hey there! 
-This project is all about detecting **spam emails** using the power of **Natural Language Processing (NLP)** and **Machine Learning**.  
-It analyzes email text, cleans it up, and predicts whether it's **Spam 🚨** or **Ham ✅ (Not Spam)** — with over **97% accuracy!**
+This project predicts whether an email is **Spam** or **Not Spam** using **Natural Language Processing (NLP)** and **Machine Learning**.
 
-## 🎯 Goal
+I built it to understand how text data can be cleaned, processed, and used to train models that make real-world predictions — in this case, detecting unwanted spam messages automatically.
 
-Build a machine learning model that can **automatically classify emails** based on their content,  
-helping users filter out unwanted spam messages efficiently.
+---
 
-## ⚙️ How It Works  
+## Goal
+To build a model that can read email text and accurately classify it as spam or not spam.
 
-1. **Text Cleaning & Preprocessing**  
-   - Lowercasing, removing URLs, numbers & special characters  
-   - Tokenizing words, removing stopwords  
-   - Lemmatizing words to their root forms  
+---
 
-2.  **Feature Extraction with TF-IDF**  
-   - Converts email text into numerical vectors  
-   - Gives more importance to meaningful words like *“win”, “claim”, “offer”*  
+## How It Works
 
-3.  **Model Training using Multinomial Naive Bayes**  
-   - Simple, fast, and perfect for text-based data  
+1. **Data Cleaning**
+   - Lowercased all text  
+   - Removed URLs, numbers, and special characters  
+   - Removed stopwords and applied lemmatization  
 
-4.  **Evaluation & Visualization**  
-   - Achieved **97.45% accuracy**  
-   - Visualized results using a Confusion Matrix heatmap  
+2. **Feature Extraction**
+   - Used **TF-IDF Vectorizer** to convert text into numerical features  
+
+3. **Model Training**
+   - Used **Multinomial Naive Bayes**, which works well for text data  
+
+4. **Evaluation**
+   - Accuracy: **97.45%**
+   - The model performs well on unseen data and handles most tricky spam emails correctly
+
+---
+
+## Example Predictions
+| Email Text | Prediction |
+|-------------|-------------|
+| “Congratulations! You’ve won a free laptop — click to claim now.” | Spam 🚨 |
+| “Hey Rahul, please check the project report attached.” | Not Spam ✅ |
+
+---
+
+## Tech Stack
+- Python  
+- Pandas, NumPy  
+- NLTK  
+- Scikit-learn  
+- Matplotlib, Seaborn  
+
+---
+
+## Dataset
+The dataset used in this project was provided as part of an online course on Machine Learning and Natural Language Processing.
+
+It contains email messages labeled as **spam (1)** or **not spam (0)**.  
+The data was used for learning purposes to understand text preprocessing, feature extraction, and model building.
+
+*(Note: Since this dataset was part of a course, I’m not redistributing it here. But any similar “spam vs ham” dataset — such as the one on Kaggle — can be used to reproduce the same results.)*
 
 
-## 📈 Model Performance
+---
 
-| Metric | Score |
-|:-------|:------:|
-| Accuracy | **97.45%** |
-| Precision (Spam) | 0.99 |
-| Recall (Spam) | 0.91 |
-| F1-Score | 0.95 |
+## Future Improvements
+- Try Logistic Regression or SVM for comparison  
+- Use Word2Vec or BERT for deeper text understanding  
+- Build a small web app using Flask or Streamlit  
 
-The model correctly classifies most emails — even tricky ones that look legit but are spam!
+---
 
-##  How to Run This Project
+## Author
+**Rahul Kumar**  
+Machine Learning Enthusiast | Data Science Learner  
 
-You can easily try it yourself in 3 simple steps   
-
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/<your-username>/Email_Spam_Detection.git
+If you like this project, feel free to ⭐ the repository!
